@@ -1,26 +1,74 @@
 .logo{
     height: 2.5rem;
+    margin-left: 3rem;
 }
 
 .search{
-    &__input {
+    // background-color: orangered;
+    flex: 0 0 40%;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color:var(--color-Grey-light-2);
+        border: none;
+        padding: 0.7rem;
+        border-radius: 100px;
+        width: 90%;
+        margin-right: -3.25rem;
+        transition: all .2s;
+        
+        &:focus{
+            outline: none;
+            width: 100%;
+            background-color: var(--color-Grey-light-3);
+        }
+
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            background-color:var(--color-Grey-light-3) ;
+        }
+    }
+
+    &__input:focus + &__button {
+        background-color: var(--color-Grey-light-3);
     }
 
     &__button{
+        background-color:var(--color-Grey-light-2);
+        border: none;
 
+        &:focus{
+            outline: none;
+        }
+
+        &:active{
+            transform: translateY(2px);
+        }
     }
 
     &__icon{
         height: 2rem;
         width: 2rem;
+        fill: var(--color-Grey-dark-2);
     }
 }
 
 .user-nav {
+    background-color: greenyellow;
+
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-right: 2rem;
 
     &__icon-box{
-
+        margin-right: 1rem;
     }
 
     &__icon {
@@ -29,7 +77,8 @@
     }
 
     &__notification{
-
+        margin-right: 1rem;
+        color: red;
     }
 
     &__user-photo{
